@@ -4,6 +4,9 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <limits.h>
 
 /**
  * struct structprint - structure containing
