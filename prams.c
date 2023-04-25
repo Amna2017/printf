@@ -16,7 +16,7 @@ prams->hashtag_flag = 0;
 prams->zero_flag = 0;
 prams->minus_flag = 0;
 prams->width = 0;
-prams->precision = 0;
+prams->precision = UINT_MAX;
 prams->h_modifier = 0;
 prams->l_modifier = 0;
 (void)list;
