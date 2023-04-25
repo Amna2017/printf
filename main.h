@@ -77,7 +77,7 @@ int print_percent(va_list list, prams_t *prams);
 int print_S(va_list list, prams_t *prams);
 
 /* no.c module */
-char *convert(long int num, int base, int flags, params_t *prams);
+char *convert(long int num, int base, int flags, prams_t *prams);
 int print_unsigned(va_list list, prams_t *prams);
 int print_address(va_list list, prams_t *prams);
 
