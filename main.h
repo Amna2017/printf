@@ -54,7 +54,7 @@ typedef struct parameters
 } prams_t;
 
 /**
- * struct specifier - Struct token
+ * struct specifiers - Struct token
  *
  * @specifiers: format token
  * @fun: The function associated
