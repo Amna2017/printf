@@ -27,7 +27,7 @@ int print_hex(va_list list, prams_t *prams)
 		*--str = '0';
 	}
 	prams->unsign = 1;
-	return (c += print_no(str, prams));
+	return (c += print_S(str, prams));
 }
 
 /**
@@ -57,7 +57,7 @@ int print_HEX(va_list list, prams_t *prams)
 		*--str = '0';
 	}
 	prams->unsign = 1;
-	return (c += print_no(str, prams));
+	return (c += print_S(str, prams));
 }
 /**
  * print_binary - prints unsigned binary number
@@ -102,5 +102,5 @@ int print_octal(va_list list, prams_t *prams)
 	if (prams->hashtag_flag && l)
 		*--str = '0';
 	prams->unsign = 1;
-	return (c += print_no(str, prams));
+	return (c += print_S(str, prams));
 }

@@ -74,7 +74,7 @@ int print_char(va_list list, prams_t *prams);
 int print_int(va_list list, prams_t *prams);
 int print_string(va_list list, prams_t *prams);
 int print_percent(va_list list, prams_t *prams);
-int print_S(va_list list, prams_t *prams);
+int print_S(va_list ap, prams_t *prams);
 
 /* no.c module */
 char *convert(long int num, int base, int flags, prams_t *prams);
