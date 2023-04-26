@@ -2,36 +2,37 @@
 
 /**
  * _puts - prints a string with newline
- * @st: the string to print
+ * @str: the string to print
  *
  * Return: void
  */
-int _puts(char *st)
+int _puts(char *str)
 {
-	char *a = st;
+	char *x = str;
 
-	while (*st)
-		_putchar(*st++);
-	return (st - a);
+	while (*str)
+		_putchar(*str++);
+	return (str - x);
 }
 
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
+ *
  * Return: On success 1.
- * On error, -1 is returned.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(int c)
 {
-	static int x;
+	static int y;
 	static char buf[OUTPUT_BUF_SIZE];
 
-	if (c == BUF_FLUSH || x >= OUTPUT_BUF_SIZE)
+	if (c == BUF_FLUSH || y >= OUTPUT_BUF_SIZE)
 	{
-		write(1, buf, x);
-		x = 0;
+		write(1, buf, y);
+		y = 0;
 	}
 	if (c != BUF_FLUSH)
-		buf[x++] = c;
+		buf[y++] = c;
 	return (1);
 }
