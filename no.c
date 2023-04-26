@@ -16,7 +16,7 @@ char *convert(long int num, int base, int flags, prams_t *prams)
 	char sign = 0;
 	char *ptr;
 	unsigned long n = num;
-	(void)params;
+	(void)prams;
 
 	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
@@ -51,12 +51,12 @@ int print_unsigned(va_list list, prams_t *prams)
 
 	if (prams->l_modifier)
 		l = (unsigned long)va_arg(list, unsigned long);
-	else if (params->h_modifier)
+	else if (prams->h_modifier)
 		l = (unsigned short int)va_arg(list, unsigned int);
 	else
 		l = (unsigned int)va_arg(list, unsigned int);
 	prams->unsign = 1;
-	return (print_no(convert(l, 10, CONVERT_UNSIGNED, prams), prams));
+	return (print_S(convert(l, 10, CONVERT_UNSIGNED, prams), prams));
 }
 
 
@@ -79,5 +79,5 @@ int print_address(va_list list, prams_t *prams)
 	str = convert(n, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, prams);
 	*--str = 'x';
 	*--str = '0';
-	return (print_no(str, prams));
+	return (print_S(str, prams));
 }
