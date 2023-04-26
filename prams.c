@@ -8,7 +8,7 @@
 *Return: void
 */
 
-void init_prams(prams_t *prams, va_list list)
+void init_params(prams_t *prams, va_list list)
 {
 prams->unsign = 0;
 prams->plus_flag = 0;

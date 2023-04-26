@@ -8,11 +8,11 @@
  */
 int (*get_specifier(char *s))(va_list list, prams_t *prams)
 {
-	specifier_t specifiers[] = {
-		{"c", print_char},
-		{"d", print_int},
-		{"i", print_int},
-		{"s", print_string},
+	specifiers_t specifiers[] = {
+		{ "c", print_char },
+		{ "d", print_int},
+		{ "i", print_int},
+		{ "s", print_string},
 		{"%", print_percent},
 		{"b", print_binary},
 		{"o", print_octal},
@@ -25,15 +25,15 @@ int (*get_specifier(char *s))(va_list list, prams_t *prams)
 		{"R", print_rot13},
 		{NULL, NULL}
 	};
-	int id = 0;
+	int x = 0;
 
-	while (specifiers[id].specifier)
+	while (specifiers[x].specifiers)
 	{
-		if (*s == specifiers[id].specifier[0])
+		if (*s == specifiers[x].specifiers[0])
 		{
-			return (specifiers[id].f);
+			return (specifiers[x].fun);
 		}
-		id++;
+		x++;
 	}
 	return (NULL);
 }
